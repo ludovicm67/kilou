@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>WfF'Desktop :: V1.0ALPHA</title>
+<link href='http://fonts.googleapis.com/css?family=Didact+Gothic&subset=latin,cyrillic-ext,greek-ext,greek,latin-ext,cyrillic' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body {
+background:url(img/bg.png);
+margin:0px;
+font-family: 'Didact Gothic', sans-serif;
+}
+.refletheure{
+font-family:bold Verdana, Arial, Helvetica, sans-serif;
+font-size:120px;
+float:right;
+margin-right:15%;
+margin-top:18%;
+
+color:#fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5A5B6C), to(#FFF));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+-webkit-box-reflect: below -57px -webkit-gradient(linear, left top, left bottom, from(transparent), to(white)); 
+}
+.barresys{height:25px;background-color:#000;padding:3px;background:url(img/barrebg.png);color:#fff; text-shadow: 1px 1px 2px #999;}
+.barreright{float:right;}
+.alink{color:#fff;text-decoration:none;}
+.bgaccpt{background:url(img/fontaccbg.png);margin:auto;width:95%;height:92%;}
+.powered{background:url(img/powered.png);position:absolute;bottom:0px;left:5px;width:200px;height:100px;}
+.loginpc{
+border:1px solid #67697B;
+background:url(img/barrebg.png);
+border-radius:15px;
+width:200px;
+position:fixed;
+top:30%;
+left:10%;
+text-align:center;
+}
+</style>
+
+
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+function HEUREjs()
+	{
+	krucial = new Date;
+	heure = krucial.getHours();
+	min = krucial.getMinutes();
+	sec = krucial.getSeconds();
+	jour = krucial.getDate();
+	mois = krucial.getMonth()+1;
+	annee = krucial.getFullYear();
+	if (sec < 10)
+		sec0 = "0";
+	else
+		sec0 = "";
+	if (min < 10)
+		min0 = "0";
+	else
+		min0 = "";
+	if (heure < 10)
+		heure0 = "0";
+	else
+		heure0 = "";
+	DinaHeure = heure0 + heure + ":" + min0 + min;
+	which = DinaHeure
+	if (document.getElementById){
+		document.getElementById("accheure").innerHTML=which;
+	}
+
+
+	DinaHeuresys = heure0 + heure + ":" + min0 + min + ":" + sec0 + sec;
+	whichsys = DinaHeuresys
+	if (document.getElementById){
+		document.getElementById("sysheure").innerHTML=whichsys;
+	}
+
+
+	setTimeout("HEUREjs()", 1000)
+	}
+window.onload = HEUREjs;
+</SCRIPT>
+
+</head>
+<body>
+<div class="barresys">
+MY-PC
+<div class="barreright">
+<a href="javascript:;" onclick="Suite(this)" id="sysheure" class="alink" ACCESSKEY="C">00:00:00</a>
+
+
+
+<div id="popup" style="display: none; border: #000000 2px solid; background:#0D0D0E; width: 300px;position:absolute;right:0px;top:30px;">
+
+</div>
+
+
+
+</div>
+</div>
+<div class="bgaccpt">
+<div id="accheure" class="refletheure">00:00</div>
+<div class="loginpc">
+<h2>Identification</h2>
+Nom d'utilisateur<br />
+
+
+<script language="JavaScript"> 
+function submitonEnter(evt){ 
+var charCode = (evt.which) ? evt.which : event.keyCode 
+if(charCode == "13"){ 
+document.form1.submit(); 
+} 
+} 
+</script> 
+
+<form name="form1" action="barre.html" method="post"> 
+<input type="text" name="user" onKeyDown="javascript:return submitonEnter(event);" />
+<br> 
+<input type="submit" value="SEND" style="display:none;"> 
+</form> 
+
+
+</div>
+</div>
+<div class="powered" id="powered"></div>
+</body>
+</html>

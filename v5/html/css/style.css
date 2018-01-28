@@ -1,0 +1,25 @@
+body
+{
+margin:0px;
+}
+.terminalclass
+{
+background: #000000;
+color:#ffffff;
+width:485px;
+height:400px
+}
+.inputterm
+{
+margin-top:-10px;
+width:100%;
+height:95%;
+resize: none;
+border:none;
+color:#ffffff;
+background:#000000;
+}
+.hidden
+{
+display: none;
+}

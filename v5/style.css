@@ -1,0 +1,88 @@
+body {
+        background-color: #0077ff; /*On change la couleur de fond car le blanc c'est pas très joli*/
+}
+.fenetre {
+        position: absolute; /*On place notre fenêtre en position absolute car celle ci pourra être bougée*/
+}
+.haut {
+        height: 28px; /*Ici on indique que le haut fera 28px de longueur, vous pouvez changer cela si votre fenêtre a un design différent*/
+}
+.milieu {
+        height: 100%; /*Ici on dit au milieu de prendre toute la longueur possible*/
+}
+.bas {
+        height: 8px; /*Ici on indique la taille du bas, comme pour le haut*/
+}
+.haut_gauche {
+        width: 8px; /*On indique la largeur du coin haut gauche*/
+        height: 100%; /*On lui indique de prendre toute la longueur possible.*/
+        background-image: url(images/haut_gauche.gif);
+        float: left; /*On le positionne à gauche*/
+    opacity : 0.6; 
+    -moz-opacity : 0.6; 
+    -ms-filter: "alpha(opacity=60)"; /* IE 8 */ 
+    filter : alpha(opacity60); /* IE < 8 */ 
+}
+.haut_droite { /*On fait de même avec le coin haut droit*/
+        width: 8px;
+        height: 100%;
+        background-image: url(images/haut_droite.png);
+        float: right;
+    opacity : 0.6; 
+    -moz-opacity : 0.6; 
+    -ms-filter: "alpha(opacity=60)"; /* IE 8 */ 
+    filter : alpha(opacity60); /* IE < 8 */ 
+}
+.haut_centre {
+        height:100%;
+        margin-left: 8px; /*On fait cela pour pas que le centre se retrouve sous les coins*/
+        margin-right: 8px;
+        background-image: url(images/haut_centre.png);
+}
+
+.milieu_gauche { /*On repete les mêmes opérations pour les autres divs*/
+        width: 8px;
+        height: 100%;
+        background-image: url(images/milieu_gauche.png);
+        float: left;
+}
+.milieu_droite {
+        width: 8px;
+        height: 100%;
+        background-image: url(images/milieu_droite.png);
+        float: right;
+}
+.milieu_centre {
+        height: 100%;
+        background-color: #ffffff;
+        margin-left: 8px;
+        margin-right: 8px;
+        text-align: center;
+}
+
+.bas_gauche {
+        width: 8px;
+        height: 100%;
+        background-image: url(images/bas_gauche.png);
+        float: left;
+    opacity : 0.6; 
+    -moz-opacity : 0.6; 
+    -ms-filter: "alpha(opacity=60)"; /* IE 8 */ 
+    filter : alpha(opacity60); /* IE < 8 */ 
+}
+.bas_droite {
+        width: 8px;
+        height: 100%;
+        background-image: url(images/bas_droite.png);
+        float: right;
+    opacity : 0.6; 
+    -moz-opacity : 0.6; 
+    -ms-filter: "alpha(opacity=60)"; /* IE 8 */ 
+    filter : alpha(opacity60); /* IE < 8 */ 
+}
+.bas_centre {
+        height: 100%;
+        background-image: url(images/bas_centre.png);
+        margin-left: 8px;
+        margin-right: 8px;
+}

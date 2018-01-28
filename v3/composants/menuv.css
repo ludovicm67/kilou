@@ -1,0 +1,87 @@
+/* CSS du menu vertical, bieler batiste */
+
+body{
+    margin-left:15em;
+    }
+
+.menu{
+    position:absolute;
+    /* solve a Opera7/IE display bug */
+    width:152px;
+    width/**/:150px;
+    border-top: 1px #000 solid;
+    border-left: 1px #000 solid;
+    border-right: 1px #000 solid;
+    margin:0;
+    padding:0;
+    }
+    
+.menu span{
+    display:none;
+    }
+    
+.menu ul{
+    border-top: 1px #000 solid;
+    border-left: 1px #000 solid;
+    border-right: 1px #000 solid;
+    margin:0;
+    padding:0;
+    position:absolute; /* important */
+    width:152px;
+    width/**/:150px;
+    }
+    
+.menu li ul{
+    visibility:hidden;
+    }
+            
+.menu li ul{
+    margin-left:150px; /* be careful */
+    margin-top:-24px;
+    }
+    
+.menu a{
+    text-align:center;
+    background-color: #ff9;
+    color:#000;
+    text-weight:bold;
+    display:block;
+    width:150px;
+    border-bottom: 1px #000 solid;
+    text-decoration:none;
+    margin:0;
+    padding:3px 0 3px 0; /* em units can creat little graphic bug in mozilla */
+    }
+    
+.menu a:hover{
+    background-color: #aaf;
+    }
+    
+/* for a mozilla better display with key nav */
+.menu a:focus{
+    background-color: #aaf;
+}
+
+.menu span{
+    /* hide some accessibility stuff */
+    display:none;
+    }
+        
+.menu li{
+    width:150px;
+    display:block;    
+    float:left;  
+    list-style:none;
+    margin:0;
+    padding:0;
+    }
+    
+/* IE PC selector */
+* html .menu li {
+    display:inline; /* solve a IE PC list bug */
+    float:none; /* solve a IE5 clav nav bug */
+    }
+    
+a.linkOver{
+    background-color: #eee;
+    }

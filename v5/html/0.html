@@ -1,0 +1,27 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css" />
+<link href="../style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="../fenetres.js"></script>
+<title>TERMINAL</title>
+<script language="JavaScript">
+submitonEnter function () {
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) = keycode e.which;
+if (keycode == "13") {
+document.k5term.submit ();
+}
+}
+</script>
+</head>
+<body onload="document.k5term.line.focus();window.parent.location.creer_fenetre(400,250,500,150,2,1);">
+<div class="terminalclass">
+<pre>test@MY-PC : </pre>
+<form name="k5term" method="get" action="">
+<textarea name="line" class="inputterm" onkeyup="if(event.keyCode==13)this.form.submit();"></textarea>
+<input type="submit" class="hidden" value="valid">
+</form>
+</div>
+</body>
+</html>

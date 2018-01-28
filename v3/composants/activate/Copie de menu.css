@@ -1,0 +1,75 @@
+/* CSS du menu horizontal, bieler batiste */
+
+.menu{
+    position:absolute;
+    display:block;
+    margin:0;
+    padding:0;
+    width:500px;
+    }
+
+.menu ul{
+    position:absolute;
+    display:block;
+    width:150px;
+    /*margin:0;*/
+    padding:0;
+    }
+    
+.menu li ul{
+    visibility:hidden;
+    }
+
+.menu li li ul{
+    position:absolute;
+    margin-left:124px;
+    margin-top:-23px;
+    }
+    
+.menu li{
+    list-style:none;
+    width:124px;
+    height:auto;
+    display:inline;
+    display/**/:block;
+    float:none;
+    float/**/:left;
+    margin:0;
+    padding:0;
+    }
+    
+.menu li li{
+    display:block;
+    float:none;
+    }
+    
+/* correct a little IE bug */
+* html .menu li li{
+    display:inline;
+    }
+
+.menu a{
+    text-align:center;
+    background-color: #9cf;
+    border:1px #666 solid;
+    color:#000;
+    display:block;
+    width:120px;
+    text-decoration:none;
+    padding:2px 0;
+    margin:1px;
+    }
+    
+.menu a:hover{
+    background-color: #eee;
+    border:1px #aaa solid;
+    }
+    
+/* for a mozilla better display with key nav */
+.menu a:focus{
+    background-color: #aaf;
+}
+
+a.linkOver{
+    background-color: #eee;
+    }

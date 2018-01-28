@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>DESKTOP [WfF]</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="fenetres.js"></script>
+<SCRIPT language=JavaScript>
+function date()
+{
+
+var today=new Date();
+var date_heure="";
+h = today.getHours();
+m = today.getMinutes();
+s = today.getSeconds();
+
+
+        if(h<10)
+   { h = '0'+h; }
+        if(m<10)
+   { m = '0'+m; }
+        if(s<10)
+   { s = '0'+s; }
+date_heure = ''+h+':'+m+':'+s+'';
+
+document.getElementById('d').innerHTML = date_heure;
+}
+setInterval("date()",1000);
+</SCRIPT>
+<style>
+html,body {overflow:hidden;}
+body {background: url(bg.jpg) no-repeat fixed;margin:0px;}
+//#barre {z-index:99999;border-top:1px solid #003152;background: url(barre.png) repeat-x;background-position: left bottom;position:absolute;height: 35px;width:100%;bottom:0px;left:0px;right:0px;color:#fff;}
+#barre{position:fixed;z-index:99999;border-top:1px solid #003152;background: url(barre.png) repeat-x;bottom:0px;width:100%;}
+#barreopen {padding-left:10px;z-index:99999;background: url(barremenu.png) repeat-x;background-position: left bottom;position:fixed;bottom:30px;left:0px;height: 541px;width:356px;color:#fff;display:none;} 
+#barreopen input {width:200px;}
+#barreopen input:hover {width:200px;background:#E86500;}
+</style>
+<script type="text/javascript">
+function Suite(lien){
+	var objet = document.getElementById('barreopen');
+	if(objet.style.display == "none" || !objet.style.display){
+		objet.innerHTML = "<br><br><br><br><br><br><br><input type=\"button\" value=\"Tester Gerstionnaire de fenetres\" onclick=\"creer_fenetre(100,50,500,100,1,2)\" /><br><input type=\"button\" value=\"Calculatrice\" onclick=\"creer_fenetre(375,105,316,298,3,3)\" /><br><input type=\"button\" value=\"Terminal de lignes de commande\" onclick=\"creer_fenetre(375,105,500,400,0,0)\" /><img src=\"SYS/USER/demo/DATA/avatar/avatar01.jpg\" alt=\"AVATAR\" width=\"98\" height=\"90\" style=\"position:absolute;bottom:340px;left:253px;\"><span style=\"width:120px;text-align:center;position:absolute;bottom:315px;left:240px;text-transform:uppercase;\">Utilisateur</span>";
+		objet.style.display = "block";objet.style.overflow = "hidden";lien.innerHTML = "<img src=\"barrebotton.png\" alt=\"WfF\">";var hFinal      =     441;var hActuel     =     0;var timer;var fct =        function (){hActuel  +=       275;objet.style.height     =	 hActuel      +     'px';if( hActuel > hFinal){clearInterval(timer);objet.style.overflow    =   'inherit';}};fct();timer = setInterval(fct,40);}else if(objet.style.display == "block"){var hFinal      =     0;var hActuel     =     441;var timer;var fct =        function (){hActuel  -=   500;objet.style.height     =	 hActuel      +     'px';if( hActuel < hFinal){clearInterval(timer);objet.style.overflow    =   'inherit';objet.style.display     =   "none";}};fct();timer = setInterval(fct,40);lien.innerHTML = "<img src=\"barrebotton.png\" alt=\"WfF\">";}}
+</script>
+</head>
+<body onmousemove="deplacer_fenetre(event)" onload="creer_fenetre(400,250,500,150,2,1)">
+<img src="images/kilou.png" style="position:fixed;" alt="KILOU">
+<iframe src="html/0.html" application="yes" style="position:fixed;bottom:50px;left:30%;"></iframe>
+<div id="barreopen">Une erreur est survenue !</div>
+<div id="barre"><img src="barrebotton.png" alt="WfF" title="D&eacute;marrer" onclick="Suite(this)">
+<span id="d" name="d" style="font-weight:bold;text-align:right;right:30px;position:absolute;top:9px;" >" HEURE "</span>
+</div>
+<div style="color:#FFF;position:fixed;bottom:65px;text-align:right;right:5px;">
+You are running the Alpha test version of KILOU5<br />WfF'Desktop (KILOU5) is created by World for Fun !
+</div>
+</body>
+</html>

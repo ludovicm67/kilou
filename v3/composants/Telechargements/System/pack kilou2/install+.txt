@@ -1,0 +1,7 @@
+INSTALL +
+
+install=
+ - com_pack K2
+   @@@@@@@@@@@
+
+@---End

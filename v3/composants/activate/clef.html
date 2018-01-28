@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style type="text/css">
+body{
+font-family:Verdana, Geneva, sans-serif;
+background:url(img/65.jpg);
+}
+
+#divco{
+position:absolute;
+left:0px;
+top:0px;
+background:black;
+filter:alpha(opacity=60);
+opacity:0.6;
+cursor:pointer;
+}
+
+#gogo{
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+position:absolute;
+left:0px;
+top:0px;
+border-style:outset;
+border-color:yellow;
+color:white;
+background:url(img/fenetre.jpg);
+margin:auto;
+height:250px;
+width:400px;
+}
+
+input{
+color:black;
+background-color:white;
+margin:45px auto 0 auto;
+display:block;
+height:30px;
+width:300px;
+font-size:20px;
+text-align:center;
+}
+
+#tonbou{
+background:url(img/23.png) no-repeat;
+display:block;
+height:38px;
+width:38px;
+margin:20px auto 0 auto;
+}
+
+#tonbou:hover{
+background:url(img/24.png) no-repeat;
+cursor:pointer;
+}
+
+.txt{
+display:block;
+font-size:25px;
+text-align:center;
+margin-top:15px;
+}
+
+#log{
+margin-top:5px;
+}
+
+#pw{
+margin-top:5px;
+}
+
+
+#dig{
+background:url(img/cadre.png) no-repeat;
+height:150px;
+width:300px;
+}
+
+#texte{
+color:white;
+display:block;
+font-size:18px;
+text-align:center;
+margin:40px 0 0 0;
+}
+
+#texte2{
+background:url(img/bouton.png) no-repeat;
+height:38px;
+width:68px;
+display:block;
+font-size:18px;
+text-align:center;
+margin:65px 0 0 115px;
+padding-top:4px;
+color:#FFF;
+}
+
+#texte2:hover{
+color:black;
+background:url(img/bouton2.png) no-repeat;
+cursor:pointer;
+}
+
+#im3{
+background:url(img/fermer.png) no-repeat;
+height:20px;
+width:20px;
+display:block;
+margin:-60px 0 0 270px;
+}
+
+#im3:hover{
+background:url(img/fermer2.png) no-repeat;
+cursor:pointer
+}
+
+</style>
+<script language="JavaScript" type="text/javascript">
+var tablog=new Array(3.3907391268845963e+22,3.3907391268845963e+22,3.3907391268845963e+22)  //tableau de login 3jWWd6i97CGb
+var tabcode=new Array(3.3907391268845963e+22,3.3907391268845963e+22,3.3907391268845963e+22) //tableau de code 3jWWd6i97CGb
+function seecode(){
+var code=1
+var codelog=1
+var deco=document.getElementById('pw').value
+var deci=document.getElementById('log').value
+
+if(deci==''){
+fendial('veuillez entrer un identifiant')
+return false
+}
+if(deco==''){
+fendial('veuillez entrer un code')
+return false
+}
+for (i=0; i<deci.length; i++){
+codelog=codelog*deci.charCodeAt(i);
+}
+for (i=0; i<deco.length; i++){
+code=code*deco.charCodeAt(i);
+}
+for (j=0; j<tablog.length; j++){
+if(tablog[j]==codelog && tabcode[j]==code){
+location.assign(deco+'.html')
+break
+}
+}
+if(codelog!=code){
+fendial('code non valide')
+document.getElementById('pw').value=''
+}
+}
+
+function creation(elem,parent,ref){
+var ddc=(arguments[1]=='body') ? document.documentElement.childNodes[1] : document.getElementById(parent)
+ddc.appendChild(document.createElement(elem)).setAttribute("id",ref);
+}
+
+function quit(){
+document.getElementById('dig').parentNode.removeChild(document.getElementById('dig'));
+(document.getElementById('log').value=='') ? document.getElementById('log').focus() : document.getElementById('pw').focus()
+}
+
+function anule(){
+clearInterval(regul);
+document.getElementById('gogo').parentNode.removeChild(document.getElementById('gogo'));
+document.getElementById('divco').parentNode.removeChild(document.getElementById('divco'));
+}
+
+
+
+function sscro(){
+var ddl=(navigator.vendor) ? document.documentElement.childNodes[1] : document.documentElement;
+var dde=document.documentElement;
+if(document.getElementById('dig')!=null){
+var dvg=document.getElementById('dig')
+dvg.style.left=((dde.clientWidth-dvg.offsetWidth)/2)+ddl.scrollLeft+'px';
+dvg.style.top=(dde.clientHeight-dvg.offsetHeight)/2+ddl.scrollTop+"px";
+}
+var adi=document.getElementById('gogo');
+var dico=document.getElementById('divco');
+dico.style.height=dde.clientHeight+ddl.scrollTop+"px";
+dico.style.width=dde.clientWidth+ddl.scrollLeft+"px";
+adi.style.left=((dde.clientWidth-adi.offsetWidth)/2)+ddl.scrollLeft+'px';
+adi.style.top=(dde.clientHeight-adi.offsetHeight)/2+ddl.scrollTop+"px";
+}
+
+
+function fendial(message){
+if(document.getElementById('dig')==null){
+creation('div','body','dig');
+var dvg=document.getElementById('dig')
+dvg.style.position='absolute';
+creation('span','dig','texte');
+creation('div','dig','im3');
+creation('span','dig','texte2');
+document.getElementById('texte').appendChild(document.createTextNode(message))
+document.getElementById('texte2').appendChild(document.createTextNode('OK'))
+document.getElementById('texte2').onclick=quit;
+document.getElementById('im3').onclick=quit;
+dvg.style.left=((document.documentElement.clientWidth-dvg.offsetWidth)/2)+'px';
+dvg.style.top=((document.documentElement.clientHeight-dvg.offsetHeight)/2)+"px";
+}
+}
+
+function init(){
+creation('div','body','divco');
+creation('div','body','gogo');
+var oggo=document.getElementById('gogo');
+oggo.appendChild(document.createElement('span')).setAttribute("class",'txt');
+creation('input','gogo','log');
+oggo.appendChild(document.createElement('span')).setAttribute("class",'txt');
+creation('input','gogo','pw');
+creation('div','gogo','tonbou');
+(navigator.appName.substring(0,3)!="Mic") ? document.getElementById('pw').setAttribute("type",'password') : null;
+document.getElementById('gogo').childNodes[0].appendChild(document.createTextNode("Clé d'activation :"));
+document.getElementById('gogo').childNodes[2].appendChild(document.createTextNode("Rerentrez la clé d'activation :"));
+document.getElementById('tonbou').onclick=seecode;
+document.getElementById('divco').onclick=anule;
+document.getElementById("log").focus();
+oggo.style.left=((document.documentElement.clientWidth-oggo.offsetWidth)/2)+'px';
+oggo.style.top=((document.documentElement.clientHeight-oggo.offsetHeight)/2)+"px";
+regul=setInterval(sscro,10);
+}
+</script>
+</head>
+<body>
+<button onclick='init()'>>> Entrer la clé d'activation <<</button>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

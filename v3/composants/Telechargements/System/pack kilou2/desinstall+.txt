@@ -1,0 +1,7 @@
+DESINSTALL +
+
+desinstall=
+ - com_pack K2
+   @@@@@@@@@@@
+
+@---End
