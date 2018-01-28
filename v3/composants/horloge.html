@@ -3,14 +3,14 @@
 
 <title>KILOU3 :: Bienvenue !</title>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="fr" />
     <meta name="Robots" content="follow" />
     <meta name="MSSmartTagsPreventParsing" content="TRUE" />
 
 <!-- script du menu -->
 <script type="text/javascript" src="dynMenu.js"></script>
- <!-- détéction du navigateur -->
+ <!-- dÃ©tÃ©ction du navigateur -->
 <script type="text/javascript" src="browserdetect.js"></script>
 
 <!-- important pour que les vieux navigateurs ne comprennent pas le CSS -->
@@ -26,7 +26,7 @@
 <style>HTML,BODY{cursor: url("cursor/2.cur"), pointer;}</style>
 <style>HTML,BODY{cursor: url("cursor/3.cur"), crosshair;}</style>
 <body bgproperties="fixed" background="img.jpg">
-<!-- liste imbriquée de liens qui fera office de menu -->
+<!-- liste imbriquÃ©e de liens qui fera office de menu -->
 <ul id="menu">
     <li><a href="#EMPLACEMENTS"><font color="#FFFFFF"><img src="icons/folder.png" alt="Emplacements"></font><br>EMPLACEMENTS</a>
         <ul>
@@ -34,10 +34,10 @@
             <li><a href="#Dossiers"><font color="#FFFFFF"><img src="icons/folder.png" alt="Dissiers"></font> Dossiers</a>
                 <ul>
                     <li><a href="bureau.html"><font color="#FFFFFF"><img src="icons/house.png" alt="Bureau"></font> Bureau</a></li>
-                    <li><a href="#"><font color="#FFFFFF"><img src="icons/film.png" alt="Vidéos"></font> Vidéos</a>
+                    <li><a href="#"><font color="#FFFFFF"><img src="icons/film.png" alt="VidÃ©os"></font> VidÃ©os</a>
                         <ul>
-                            <li><a href="video1.html"><font color="#FFFFFF"><img src="icons/film.png" alt="Vidéo"></font> Ozie Boo ! La chanson de Noël</a></li>
-                            <li><a href="video2.html"><font color="#FFFFFF"><img src="icons/film.png" alt="Vidéo"></font> The Lion Sleeps Tonight</a></li>
+                            <li><a href="video1.html"><font color="#FFFFFF"><img src="icons/film.png" alt="VidÃ©o"></font> Ozie Boo ! La chanson de NoÃ«l</a></li>
+                            <li><a href="video2.html"><font color="#FFFFFF"><img src="icons/film.png" alt="VidÃ©o"></font> The Lion Sleeps Tonight</a></li>
                         </ul></li>
                     <li><a href="#"><font color="#FFFFFF"><img src="icons/controller.png" alt="Jeux"></font> Jeux</a>
                         <ul>
@@ -49,18 +49,18 @@
                 </ul>
             </li>
             <li><a href="javascript:window.location.reload()"><font color="#FFFFFF"><img src="icons/page_refresh.png" alt="Actualiser"></font> Actualiser</a></li>
-            <li><a href="#"><font color="#FFFFFF"><img src="icons/computer.png" alt="Système"></font> Système</a>
+            <li><a href="#"><font color="#FFFFFF"><img src="icons/computer.png" alt="SystÃ¨me"></font> SystÃ¨me</a>
                 <ul>
                     <li><a href="fermeture.htm"><font color="#FFFFFF"><img src="icons/monitor.png" alt="Fermer la session"></font> Fermer la session</a></li>
                     <li><a href="veille.htm"><font color="#FFFFFF"><img src="icons/monitor.png" alt="Mettre en veille"></font> Mettre en veille</a></li>
-                    <li><a href="arret.htm"><font color="#FFFFFF"><img src="icons/monitor.png" alt="Arrêter"></font> Arrêter l'ordinateur</a></li>
+                    <li><a href="arret.htm"><font color="#FFFFFF"><img src="icons/monitor.png" alt="ArrÃªter"></font> ArrÃªter l'ordinateur</a></li>
                 </ul>
             </li>
         </ul>
     <li><a href="#AIDE" ><font color="#FFFFFF"><img src="icons/information.png" alt="Aide/Informations"></font><br>INFORMATIONS</a>	
         <ul>
-            <li><a href="#">élément 1</a></li>
-            <li><a href="#">élément 2</a></li>
+            <li><a href="#">Ã©lÃ©ment 1</a></li>
+            <li><a href="#">Ã©lÃ©ment 2</a></li>
             <li><a href="http://ludospace.webou.net">LUDOSPACE</a></li>
         </ul>
     </li>
@@ -73,30 +73,53 @@
 
 <style>HTML,BODY{cursor: url("cursor/1.cur"), auto;}</style>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://kilou3.site.voila.fr/transmit.png" alt="/-\" title="Vous êtes actuelement Connecté !">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<font color="#FFFFFF"><b><img src="icons/date.png" alt="Date"> <a href="date.html" alt="Modifier la date"><script language="JavaScript">
-navvers = navigator.appVersion.substring(0,1);
-if (navvers > 3)
-   navok = true;
-else
-   navok = false;
-
-today = new Date;
-jour = today.getDay();
-numero = today.getDate();
-if (numero<10)
-   numero = "0"+numero;
-mois = today.getMonth();
-if (navok)
-   annee = today.getFullYear();
-else
-   annee = today.getYear();
-TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
-TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre");
-messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
-   </script>
-     <script language="JavaScript">
-document.write(messageDate);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://kilou3.site.voila.fr/transmit.png" alt="/-\" title="Vous Ãªtes actuelement ConnectÃ© !">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#FFFFFF"><b><img src="icons/date.png" alt="Date"> <a href="date.html" alt="Modifier la date"><script language="JavaScript">
+
+navvers = navigator.appVersion.substring(0,1);
+
+if (navvers > 3)
+
+   navok = true;
+
+else
+
+   navok = false;
+
+
+
+today = new Date;
+
+jour = today.getDay();
+
+numero = today.getDate();
+
+if (numero<10)
+
+   numero = "0"+numero;
+
+mois = today.getMonth();
+
+if (navok)
+
+   annee = today.getFullYear();
+
+else
+
+   annee = today.getYear();
+
+TabJour = new Array("Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi");
+
+TabMois = new Array("janvier","f&eacute;vrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","dÃ©cembre");
+
+messageDate = TabJour[jour] + " " + numero + " " + TabMois[mois] + " " + annee;
+
+   </script>
+
+     <script language="JavaScript">
+
+document.write(messageDate);
+
      </script></a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/time.png" alt="Heure"><a href="horloge.html" alt="Modifier l'heure"><span style="font-weight: bold"><script type="text/javascript">function tS(){ 	x=new Date(); 	x.setTime(x.getTime()); 	return x;}function lZ(x){ 	return (x>9)?x:'0'+x; }function dT(){	if(fr==0){		fr=1;		document.write(" " + '<span id="tP">'+eval(oT)+'</span>');	}	document.getElementById("tP").innerHTML =  eval(oT);	setTimeout('dT()',1000);}var fr=0;oT="tS().getHours()+':'+lZ(tS().getMinutes())+':'+lZ(tS().getSeconds())";</script><script>dT();</script></a></span></font>
 
 <br><br>
@@ -142,7 +165,7 @@ document.write(messageDate);
 
 <script>
 	function test(){		
-		CreerPdcFenetre( "SYSTEME >> Modifier l'heure |#erreur", 260, 350, 350, 150, "<img src=\"warning.kilou\"><br>Ce système d'exploitation est déja installé sur un autre système d'esploitation; vous ne pourrez donc pas changer l'heure de KILOU !");
+		CreerPdcFenetre( "SYSTEME >> Modifier l'heure |#erreur", 260, 350, 350, 150, "<img src=\"warning.kilou\"><br>Ce systÃ¨me d'exploitation est dÃ©ja installÃ© sur un autre systÃ¨me d'esploitation; vous ne pourrez donc pas changer l'heure de KILOU !");
 		
 						
 		
